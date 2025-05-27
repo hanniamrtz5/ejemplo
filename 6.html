@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>FRUTAS Y VERDURAS DE HANNIA MARTINEZ</title>
+</head>
+<body background="img/fondorosa.jpg">
+    <center>
+        <font size="5" face="courier" color="#e595ca";
+            <h1><b><big>FRUTAS Y VERDURAS DE HANNIA MARTINEZ </big> </b></font>
+        </font>
+        <hr><br><br>
+
+        <table bgcolor="white" border="8" bordercolor="black" width="0%">
+            <tr>
+                <th>vocabulary</th>
+            </tr>
+            <tr> 
+                <td>
+                    <select name="selecciona" size="1" id="varFV" onchange="FV()">
+                        <option value="0" selected>seleccionar</option>
+                        <option value="1">sandia</option>
+                        <option value="2">melon</option>
+                        <option value="3">pera</option>
+                        <option value="4">fresa</option>
+                        <option value="5">kiwi</option>
+                        <option value="6">durazno</option>
+                        <option value="7">mango</option>
+                        <option value="8">coco</option>
+                        <option value="9">naranja</option>
+                        <option value="10">toronja</option>
+                        <option value="11">uva</option>
+                        <option value="12">cereza</option>
+                        <option value="13">platano</option>
+                        <option value="14">aguacate</option>
+                        <option value="15">manzana</option>
+                        <option value="16">Hannia</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+ 
+        <br>
+        <!-- El atributo target="_blank" hace que se abra en otra ventana -->
+        <a id="ref1" target="_blank">
+            <img id="img" width="260" height="250" border="black">
+        </a>
+        <p style="color: #E595CA" id="imprimir" ></p>
+        <h4><p align="right">Hannia Martinez</p></h4>
+ 
+        <script type="text/javascript">
+            function FV() {
+                var ins = document.getElementById("varFV").value;
+                var img = document.getElementById("img");
+                var ref1 = document.getElementById("ref1");
+                var imprimir = document.getElementById("imprimir");
+ 
+                switch (parseInt(ins)) {
+                    case 0:
+                        img.src = "img/imagen2.jpg";
+                        ref1.href = "";
+                        imprimir.innerHTML = "selecciona opcion";
+                        break;
+                    case 1:
+                        img.src = "img/sandia.png";
+                        ref1.href = "sandia.html";
+                        imprimir.innerHTML = "watermelon";
+                        break;
+                    case 2:
+                        img.src = "img/melon.jpg";
+                        ref1.href = "melon.html";
+                        imprimir.innerHTML = "melon";
+                        break;
+                    case 3:
+                        img.src = "img/pera.png";
+                        ref1.href = "pera.html";
+                        imprimir.innerHTML = "PEAR";
+                        break;
+                    case 4:
+                        img.src = "img/fresa.jpg";
+                        ref1.href = "fresa.html";
+                        imprimir.innerHTML = "STRAWBERRY";
+                        break;
+                    case 5:
+                        img.src = "img/kiwi.jpg";
+                        ref1.href = "kiwi.html";
+                        imprimir.innerHTML = "KIWI";
+                        break;
+                    case 6:
+                        img.src = "img/durazno.jpg";
+                        ref1.href = "durazno.html";
+                        imprimir.innerHTML = "PEACH";
+                        break;
+                    case 7:
+                        img.src = "img/mango.jpg";
+                        ref1.href = "mango.html";
+                        imprimir.innerHTML = "MANGO";
+                        break;
+                    case 8:
+                        img.src = "img/coco.jpg";
+                        ref1.href = "coco.html";
+                        imprimir.innerHTML = "COCONUT";
+                        break;
+                    case 9:
+                        img.src = "img/naranja.jpg";
+                        ref1.href = "naranja.html";
+                        imprimir.innerHTML = "ORANGE";
+                        break;
+                    case 10:
+                        img.src = "img/toronja.jpg";
+                        ref1.href = "toronja.html";
+                        imprimir.innerHTML = "GRAPEFRUIT";
+                        break;
+                    case 11:
+                        img.src = "img/uva.jpg";
+                        ref1.href = "uva.html";
+                        imprimir.innerHTML = "GRAPE";
+                        break;
+                    case 12:
+                        img.src = "img/cereza.jpg";
+                        ref1.href = "cereza.html";
+                        imprimir.innerHTML = "CHERRY";
+                        break;
+                    case 13:
+                        img.src = "img/platano.png";
+                        ref1.href = "platano.html";
+                        imprimir.innerHTML = "BANANA";
+                        break;
+                    case 14:
+                        img.src = "img/aguacate.jpg";
+                        ref1.href = "aguacate.html";
+                        imprimir.innerHTML = "AVOCADO";
+                        break;
+                    case 15:
+                        img.src = "img/manzana.png";
+                        ref1.href = "manzana.html";
+                        imprimir.innerHTML = "APPLE";
+                        break;
+                    case 16:
+                        img.src = "img/Hannia.jpg";
+                        ref1.href = "Quien soy.html";
+                        imprimir.innerHTML = " HANNIA MARTINEZ💕";
+
+                        break;
+                    default:
+                        img.src = "img/imagen2.jpg";
+                        ref1.href = "";
+                        imprimir.innerHTML = "selecciona opcion";
+                        break;
+                }
+            }
+        </script>
+    </center>
+</body>
+</html>
