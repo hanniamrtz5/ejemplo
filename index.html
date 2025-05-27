@@ -1,175 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<meta charset="utf-8">
-<title>FRUTAS Y VERDURAS DE HANNIA MARTINEZ </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: #4a1a6d;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid black;
+        }
+        .operations {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .operations button {
+            padding: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+        .operations img {
+            width: 20px;
+            height: 20px;
+        }
+        .image-container img {
+            max-width: 100px;
+            margin-top: 10px;
+        }
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background: #d8bfeb;
+            border-top: 1px solid #ccc;
+        }
+    </style>
 </head>
-<body background="img/fondorosa.jpg">
-<center>
-<font font size="5" face="courier" color="#e595ca">
- 
-            <h1><b><big>FRUTAS Y VERDURAS DE HANNIA MARTINEZ </big> </b></h1>
-<hr><br><br>
- 
-            <table bgcolor="white" border="8" bordercolor="black" width="0%">
-<tr>
-<th>vocabulary</th>
-</tr>
-<tr> 
-<td>
-<select name="selecciona" size="1" id="varFV" onchange="FV()">
-<option value="0" selected>seleccionar</option>
-<option value="1">sandia</option>
-<option value="2">melon</option>
-<option value="3">pera </option>
-<option value="4">fresa </option>
-<option value="5">kiwi </option>
-<option value="6">durazno</option>
-<option value="7">mango </option>
-<option value="8">coco </option>
-<option value="9">naranja </option>
-<option value="10">toronja </option>
-<option value="11">uva </option>
-<option value="12">cereza </option>
-<option value="13">platano </option>
-<option value="14">aguacate </option>
-<option value="15">manzana </option>
-<option value="16">Hannia </option>
+<body background="img/fondo.jpg">
+    <div class="container">
+        <h1>La Calculadora de Vega y Martinez</h1>
+        <input type="number" id="num1" placeholder="Número 1">
+        <input type="number" id="num2" placeholder="Número 2">
+        
+        <div class="operations">
+            <button onclick="calculate('sum')">Sumar <img src="img/suma.png" alt="Suma"></button>
+            <button onclick="calculate('sub')">Restar <img src="img/resta.jpg" alt="Resta"></button>
+            <button onclick="calculate('mul')">Multiplicar <img src="img/multi.png" alt="Multiplicación"></button>
+            <button onclick="calculate('div')">Dividir <img src="img/divi.png" alt="División"></button>
+        </div>
+        
+        <h2 id="result">Resultado: </h2>
+        <div class="image-container">
+            <img id="operation-image" src="" alt="">
+        </div>
+        <button onclick="resetCalculator()">Restablecer</button>
+    </div>
+    
+    <footer>
+        <p>Pie de página</p>
+        <p>Martinez Ayala Hannia y Vega Lopez Ximena | Alondra Zavala</p>
+        <p>4A PROGRAMACION - CBTIS 206 - 2025</p>
+    </footer>
 
-</select>
-</td>
-</tr>
-</table>
- 
-            <br><a id="ref1"><img id="img" width="260" height="250" border="black"> </a>
-<p style="color: #37302D" id="imprimir"></p>
-<h4><p align="right">Hannia Martinez </p> </h4>
- 
-            <script type="text/javascript">
-                function FV()       
-                {
-                    var ins = document.getElementById("varFV").value;
-
-                    if (parseInt(ins)==0) {
-                    document.getElementById("img").src="img/imagen2.jpg";
-                    document.getElementById("ref1").href="";
-                    document.getElementById("imprimir").innerHTML="selecciona opcion";
-                    }       
-
-
-
-                    if (parseInt(ins)==1) {
-                    document.getElementById("img").src="img/sandia.png";
-                    document.getElementById("ref1").href="sandia.html";
-                    document.getElementById("imprimir").innerHTML="watermelon";
-                    }       
-                
-                if (parseInt(ins)==2) {
-                    document.getElementById("img").src="img/melon.jpg";
-                    document.getElementById("ref1").href="melon.html";
-                    document.getElementById("imprimir").innerHTML="melon";
-                }       
-                
-                    
-
-                if (parseInt(ins)==3) {
-                    document.getElementById("img").src="img/pera.png";
-                    document.getElementById("ref1").href="pera.html";
-                    document.getElementById("imprimir").innerHTML="PEAR";
-                }       
-                
-               
-
-                if (parseInt(ins)==4) {
-                    document.getElementById("img").src="img/fresa.jpg";
-                    document.getElementById("ref1").href="fresa.html";
-                    document.getElementById("imprimir").innerHTML="PHRASE";
-                }       
-                
-                if (parseInt(ins)==5) {
-                    document.getElementById("img").src="img/kiwi.jpg";
-                    document.getElementById("ref1").href="kiwi.html";
-                    document.getElementById("imprimir").innerHTML="KIWI";
-                }       
-                
-               
-                if (parseInt(ins)==6) {
-                    document.getElementById("img").src="img/durazno.jpg";
-                    document.getElementById("ref1").href="durazno.html";
-                    document.getElementById("imprimir").innerHTML="PEACH";
-                }           
-                
-               
-                if (parseInt(ins)==7) {
-                    document.getElementById("img").src="img/mango.jpg";
-                    document.getElementById("ref1").href="mango.html";
-                    document.getElementById("imprimir").innerHTML="MANGO";
-                }       
-               
-                if (parseInt(ins)==8) {
-                    document.getElementById("img").src="img/coco.jpg";
-                    document.getElementById("ref1").href="coco.html";
-                    document.getElementById("imprimir").innerHTML="COCONUT";
-                }       
-               
-
-                if (parseInt(ins)==9) {
-                    document.getElementById("img").src="img/naranja.jpg";
-                    document.getElementById("ref1").href="naranja.html";
-                    document.getElementById("imprimir").innerHTML="ORANGE",
-                }       
-               
-
-                if (parseInt(ins)==10) {
-                    document.getElementById("img").src="img/toronja.jpg";
-                    document.getElementById("ref1").href="toronja.html";
-                    document.getElementById("imprimir").innerHTML="GRAPEFRUIT";
-                }       
-                
-                if (parseInt(ins)==11) {
-                    document.getElementById("img").src="img/uva.jpg";
-                    document.getElementById("ref1").href="uva.html";
-                    document.getElementById("imprimir").innerHTML="GRAPE";
-                }       
-                
-
-                if (parseInt(ins)==12) {
-                    document.getElementById("img").src="img/cereza.jpg";
-                    document.getElementById("ref1").href="cereza.html";
-                    document.getElementById("imprimir").innerHTML="CHERRY";
-                }       
-                
-
-                if (parseInt(ins)==13) {
-                    document.getElementById("img").src="img/platano.png";
-                    document.getElementById("ref1").href="platano.html";
-                    document.getElementById("imprimir").innerHTML="BANANA";
-                }       
-                
-                if (parseInt(ins)==14) {
-                    document.getElementById("img").src="img/aguacate.jpn";
-                    document.getElementById("ref1").href="aguacate.html";
-                    document.getElementById("imprimir").innerHTML="AVOCADO";
-                }   
-                
-
-                if (parseInt(ins)==15) {
-                    document.getElementById("img").src="img/manzana.png";
-                    document.getElementById("ref1").href="manzana.html";
-                    document.getElementById("imprimir").innerHTML="APPLE";
-                }
-                 if (parseInt(ins)==16 {
-                    document.getElementById("img").src="img/Hannia.jpg";
-                    document.getElementById("ref1").href="Quien soy";
-                    document.getElementById("imprimir").innerHTML="";
+    <script>
+        function calculate(operation) {
+            let num1 = parseFloat(document.getElementById('num1').value);
+            let num2 = parseFloat(document.getElementById('num2').value);
+            let result = 0;
+            let image = document.getElementById('operation-image');
+            
+            if (isNaN(num1) || isNaN(num2)) {
+                alert("Por favor, ingrese números válidos");
+                return;
             }
             
- 
- 
-            </script>
- 
- 
-    </center>
- 
+            switch(operation) {
+                case 'sum':
+                    result = num1 + num2;
+                    image.src = 'img/suma.png';
+                    break;
+                case 'sub':
+                    result = num1 - num2;
+                    image.src = 'img/resta.jpg';
+                    break;
+                case 'mul':
+                    result = num1 * num2;
+                    image.src = 'img/multi.png';
+                    break;
+                case 'div':
+                    if (num2 === 0) {
+                        alert("No se puede dividir por cero");
+                        return;
+                    }
+                    result = num1 / num2;
+                    image.src = 'img/divi.png';
+                    break;
+            }
+            document.getElementById('result').innerText = "Resultado: " + result;
+        }
+
+        function resetCalculator() {
+            document.getElementById('num1').value = '';
+            document.getElementById('num2').value = '';
+            document.getElementById('result').innerText = "Resultado: ";
+            document.getElementById('operation-image').src = '';
+        }
+    </script>
 </body>
 </html>
